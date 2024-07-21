@@ -1,1 +1,2 @@
-require('roocce')
+require('config.lazy')
+require('config.set')
