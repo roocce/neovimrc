@@ -49,6 +49,10 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
+
+-- one status line for all windows
+vim.opt.laststatus = 3
+
 -- colorscheme
 vim.cmd.colorscheme("rose-pine")
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
