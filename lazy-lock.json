@@ -1,4 +1,6 @@
 {
   "lazy.nvim": { "branch": "main", "commit": "077102c5bfc578693f12377846d427f49bc50076" },
+  "lualine.nvim": { "branch": "master", "commit": "544dd1583f9bb27b393f598475c89809c4d5e86b" },
+  "nvim-web-devicons": { "branch": "master", "commit": "5be6c4e685618b99c3210a69375b38a1202369b4" },
   "rose-pine": { "branch": "main", "commit": "e4b08d74b7272cb21e4e9c71b8b9e0830fd722fe" }
 }
