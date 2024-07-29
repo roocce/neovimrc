@@ -7,5 +7,8 @@ return {
         {'<leader>pg', require('telescope.builtin').live_grep},
         {'<leader>pb', require('telescope.builtin').buffers},
         {'<leader>ph', require('telescope.builtin').help_tags}
-    }
+    },
+    init = function()
+        require('telescope').load_extension('fzf')
+    end
 }
