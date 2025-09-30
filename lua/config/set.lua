@@ -2,8 +2,9 @@
 vim.g.netrw_preview = 1
 vim.g.netrw_alto = 0
 vim.g.netrw_banner = 1
+vim.g.netrw_liststyle = 3
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 999
 vim.opt.wrap = false
 vim.opt.termguicolors = true
 
@@ -17,8 +18,9 @@ vim.opt.expandtab = true
 
 vim.opt.autoindent = true
 vim.opt.smartindent = true
-
 vim.opt.breakindent = true
+
+vim.opt.virtualedit = 'block'
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -55,6 +57,6 @@ vim.opt.laststatus = 3
 
 -- colorscheme
 vim.cmd.colorscheme("rose-pine")
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
