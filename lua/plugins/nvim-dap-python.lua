@@ -5,6 +5,9 @@ return {
         local python_path = table.concat({ vim.fn.stdpath('data'),  'mason', 'packages', 'debugpy', 'venv', 'bin', 'python'}, '/'):gsub('//+', '/')
         dap_python.setup(python_path)
 
+        vim.keymap.set('n', '<Leader>tc', function() require('dap-python').test_class() end, {desc = 'Test Class'})
+        vim.keymap.set('n', '<Leader>tm', function() require('dap-python').test_method() end, {desc = 'Test Method'})
+
         local dap = require('dap')
         local_root = vim.fn.getcwd()
         table.insert(dap.configurations.python, {
@@ -50,6 +53,23 @@ return {
                 "--no-cov"
             },
             console = "integratedTerminal"
+        })
+        table.insert(dap.configurations.python, {
+            name = 'Python: Current File',
+            type = 'python',
+            request = 'launch',
+            module = 'uvicorn',
+            args = {
+                "--reload",
+                "--host 127.0.0.1",
+                "--port 8000"
+            },
+            pathMappings = {
+                {
+                    localRoot = local_root,
+                    remoteRoot = ".",
+                }
+            };
         })
     end
 }
