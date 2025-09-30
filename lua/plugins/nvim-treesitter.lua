@@ -2,7 +2,6 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     opts = {
-        highlight = { enable = true },
         ensure_installed = {
             "bash",
             "css",
@@ -15,7 +14,7 @@ return {
             "luadoc",
             "markdown",
             "markdown_inline",
-            "org",
+            "php",
             "printf",
             "python",
             "regex",
@@ -27,6 +26,8 @@ return {
             "xml",
             "yaml",
         },
+        highlight = { enable = true },
+        indent = { enable = true },
     },
     config = function(_, opts)
         require("nvim-treesitter.configs").setup(opts)
