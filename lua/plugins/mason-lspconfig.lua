@@ -7,51 +7,33 @@ return {
             "black",
             "cssls",
             "debugpy",
-            -- "diff",
-            -- "eslint",
             "flake8",
             "html",
             "intelephense",
             "jsonls",
             "lua_ls",
-            -- "luadoc",
-            -- "markdown",
-            -- "markdown_inline",
-            -- "phpactor",
-            -- "printf",
             "pyright",
-            -- "regex",
-            -- "sql",
-            -- "stimulus_ls",
-            -- "toml",
-            -- "vim",
-            -- "vimdoc",
             "ts_ls",
             "volar",
-            -- "xml",
-            -- "yaml",
         },
         automatic_enable = true,
     },
     config = function()
-        local lspconfig = require('lspconfig')
+        vim.lsp.config('luals', {
+            filetypes = { 'lua' }
+        })
 
-        lspconfig.lua_ls.setup {
-            filetypes = { 'lua' },
-        }
+        vim.lsp.config('intelephense', {
+            filetypes = { 'php' }
+        })
 
-        lspconfig.intelephense.setup {
-            filetypes = { 'php' },
-        }
-
-        lspconfig.pyright.setup {
+        vim.lsp.config('pyright', {
             filetypes = { 'python' },
-        }
+        })
 
         local vue_language_server_path = vim.fn.expand '$MASON/packages' .. '/vue-language-server' .. '/node_modules/@vue/language-server'
 
-
-        lspconfig.ts_ls.setup {
+        vim.lsp.config('ts_ls', {
           init_options = {
             plugins = {
               {
@@ -62,9 +44,17 @@ return {
             },
           },
           filetypes = { 'typescript', 'javascript', 'vue' },
-        }
+        })
 
-        lspconfig.volar.setup {}
+        vim.lsp.config('volar', {})
+
+        vim.lsp.enable({
+            'intelephense',
+            'luals',
+            'pyright',
+            'ts_ls',
+            'volar'
+        })
 
     end,
 }
