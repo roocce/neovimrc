@@ -1,5 +1,14 @@
 return {
     "williamboman/mason.nvim",
     lazy = false,
-    opts = {}
+    opts = {
+        ui = {
+            border = "rounded",
+            icons = {
+                package_installed = "✓",
+                package_pending = "➜",
+                package_uninstalled = "✗"
+            }
+        }
+    }
 }
