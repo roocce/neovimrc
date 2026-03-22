@@ -1,8 +1,9 @@
 -- file preview, vertical right
 vim.g.netrw_preview = 1
 vim.g.netrw_alto = 0
-vim.g.netrw_banner = 1
+-- vim.g.netrw_banner = 1
 vim.g.netrw_liststyle = 3
+vim.g.netrw_winsize = 30
 
 vim.opt.scrolloff = 999
 vim.opt.wrap = false
@@ -56,7 +57,7 @@ vim.opt.undofile = true
 vim.opt.laststatus = 3
 
 -- colorscheme
-vim.cmd.colorscheme("rose-pine")
+vim.cmd.colorscheme("solarized")
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 

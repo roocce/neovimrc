@@ -55,6 +55,7 @@ return {
     keys = {
       { "<leader>td", "<cmd>Gitsigns toggle_deleted<cr>", desc = "Gitsigns toggle deleted" },
       { "<leader>tw", "<cmd>Gitsigns toggle_word_diff<cr>", desc = "Gitsigns toggle word diff" },
+      { "<leader>tt", "<cmd>Gitsigns toggle_linehl<cr><cmd>Gitsigns toggle_numhl<cr><cmd>Gitsigns toggle_signs<cr>", desc = "Gitsigns toggle signs" },
       -- require('gitsigns').setup{
       --     ...
       --     on_attach = function(bufnr)

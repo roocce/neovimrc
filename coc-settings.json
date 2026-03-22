@@ -1,0 +1,15 @@
+{
+    "suggest.noselect": false,
+    "suggest.floatConfig": {
+        "border": true,
+        "rounded": true
+    },
+    "suggest.virtualText": true,
+    "signature.floatConfig": {
+        "border": true,
+        "rounded": true
+    },
+    "vue.codeActions.enabled": true,
+    "tsserver.log": "normal",
+    "tsserver.trace.server": "verbose"
+}

@@ -3,7 +3,18 @@ return {
     tag = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim', "nvim-telescope/telescope-fzf-native.nvim" },
     init = function()
-        require('telescope').setup{}
+        require('telescope').setup{
+            defaults = {
+                sorting_strategy = "ascending",
+                border = false,
+                layout_strategy = "bottom_pane",
+                layout_config = {
+                    bottom_pane = {
+                        height = 100
+                    }
+                }
+            }
+        }
         require('telescope').load_extension('fzf')
         local wk = require('which-key')
         wk.add({

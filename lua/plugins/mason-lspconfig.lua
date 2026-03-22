@@ -9,19 +9,13 @@ return {
             "debugpy",
             "flake8",
             "html",
-            "intelephense",
             "jsonls",
-            "lua_ls",
             "pyright",
             "ts_ls",
-            "volar",
         },
         automatic_enable = true,
     },
     config = function()
-        vim.lsp.config('luals', {
-            filetypes = { 'lua' }
-        })
 
         vim.lsp.config('intelephense', {
             filetypes = { 'php' }
@@ -46,14 +40,9 @@ return {
           filetypes = { 'typescript', 'javascript', 'vue' },
         })
 
-        vim.lsp.config('volar', {})
-
         vim.lsp.enable({
-            'intelephense',
-            'luals',
             'pyright',
             'ts_ls',
-            'volar'
         })
 
     end,

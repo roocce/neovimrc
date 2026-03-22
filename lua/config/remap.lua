@@ -8,6 +8,15 @@ vim.keymap.set("n", "<leader>cn", vim.cmd.cnext)
 vim.keymap.set("n", "<leader>cp", vim.cmd.cprevious)
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+function toggleBackground()
+    if vim.o.background == 'light' then
+        vim.o.background = 'dark'
+    elseif vim.o.background == 'dark' then
+        vim.o.background = 'light'
+    end
+end
+vim.keymap.set("n", "<leader>s", toggleBackground, { desc = 'Toggle background light/dark'})
+
 vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move focus to the lower window' })
@@ -19,3 +28,4 @@ vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'LSP go to definition
 -- vim.keymap.set('i', '<S-Tab>', function()
 --   vim.lsp.completion.get()
 -- end)
+--

@@ -55,11 +55,12 @@ return {
             console = "integratedTerminal"
         })
         table.insert(dap.configurations.python, {
-            name = 'Python: Current File',
+            name = 'Uvicorn: Current File',
             type = 'python',
             request = 'launch',
             module = 'uvicorn',
             args = {
+                "app.main:app",
                 "--reload",
                 "--host 127.0.0.1",
                 "--port 8000"
