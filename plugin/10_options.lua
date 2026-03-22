@@ -57,7 +57,16 @@ vim.opt.undofile = true
 vim.opt.laststatus = 3
 
 -- colorscheme
-vim.cmd.colorscheme("solarized")
+-- vim.cmd.colorscheme("solarized")
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
+vim.g.copilot_filetypes = {
+    ['*'] = false,
+    ['javascript'] = true,
+    ['typescript'] = true,
+    ['php'] = true,
+    ['python'] = true,
+    ['vue'] = true,
+}
+vim.g.copilot_no_tab_map = true
